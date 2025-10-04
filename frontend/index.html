@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Warehouse Inventory System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Warehouse Inventory System</h1>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <h2>Add New Product</h2>
+      <form id="productForm">
+        <div class="form-group">
+          <input type="text" id="name" placeholder="Product Name" required>
+          <input type="text" id="description" placeholder="Description">
+        </div>
+        <div class="form-group">
+          <input type="number" id="stock_quantity" placeholder="Initial Stock" required>
+          <input type="number" id="low_stock_threshold" placeholder="Low Stock Threshold" value="5">
+        </div>
+        <button type="submit" class="btn">Add Product</button>
+      </form>
+    </section>
+
+    <section class="table-section">
+      <h2>Inventory List</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Stock</th>
+            <th>Threshold</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="productTable"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with for warehouse management</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
